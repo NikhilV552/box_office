@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import {ThemeProvider} from 'styled-components';
-import {Switch,Route, BrowserRouter,Redirect} from 'react-router-dom';
+import {Switch,Route, HashRouter,Redirect} from 'react-router-dom';
 import Home from './pages/HomePage';
 import Starred from './pages/StarredPage';
 import Show from './pages/Show';
@@ -17,7 +17,7 @@ const theme = {
 function App() {
     return (
 		<ThemeProvider theme={theme}>
-			<BrowserRouter>
+			<HashRouter>
 				<div className="">
 				<Switch>
 					<Route exact path="/home"  >
@@ -28,7 +28,7 @@ function App() {
 					<Redirect to="/home"/>
 				</Switch>
 			</div>
-			</BrowserRouter>
+			</HashRouter>
 		</ThemeProvider>
 	);
 }
