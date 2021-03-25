@@ -31,13 +31,12 @@ const Starred=()=>{
     },[starredShows]);
 
     return (
-        <MainComponent>
+        <MainComponent >
             The is starred Page
-            {isLoading && '<div>The shows are being loaded</div>'}
+            {isLoading && `<div >he shows are being loaded</div>`}
             {isError && `<div>Error Occured:${isError}</div>`}
             {!isLoading && !shows &&  '<div>No Starred Shows</div>'}
             {!isLoading && !isError && shows && <ShowsGrid data={shows} /> }
-
         </MainComponent>
     );
 }
