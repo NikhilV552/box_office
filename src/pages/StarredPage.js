@@ -32,7 +32,7 @@ const Starred=()=>{
 
     return (
         <MainComponent >
-            The is starred Page
+            <div style={{textAlign:"center",marginBottom:"20px",color:"#2400ff"}}>The is starred Page</div>
             {isLoading && `<div >he shows are being loaded</div>`}
             {isError && `<div>Error Occured:${isError}</div>`}
             {!isLoading && !shows &&  '<div>No Starred Shows</div>'}
